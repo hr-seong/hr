@@ -51,9 +51,9 @@ export default function About() {
           </div>
         </div>
       </div>
-      {/* <div className="section sec3">
-        <div className="content"></div>
-      </div> */}
+      <div className="section sec3">
+        <div className="content">fff</div>
+      </div>
     </div>
   );
 }
