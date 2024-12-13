@@ -1,0 +1,95 @@
+:root {
+  width: 100%;
+}
+
+#wrap {
+  position: relative;
+  height: 100%;
+
+  &.blk {
+    color: var(--white);
+  }
+  &.wht {
+  }
+}
+
+.header {
+  position: static;
+  top: 0;
+  height: 100px;
+  padding: 24px 40px;
+  &-wrap {
+    .gnb {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      &-list {
+        width: 60%;
+        gap: 40px;
+        & > li {
+          @include font(100px, var(--white), 1.4, var(--fw-bold));
+          &.li-1 {
+          }
+          &.li-2 {
+          }
+          &.li-3 {
+          }
+        }
+      }
+      .info {
+        display: flex;
+        gap: 160px;
+        .mail {
+        }
+        .company {
+        }
+      }
+    }
+  }
+  &.active {
+    height: 100%;
+    background: var(--primary);
+  }
+}
+
+.container {
+  position: relative;
+  &.main {
+    width: 100%;
+    height: 100%;
+    background: url("../../public/images/bg/bg_main_visual.png") no-repeat 0 0;
+    .main-visual {
+      display: flex;
+      align-items: flex-end;
+      height: calc(100% - 250px);
+      padding: 0 80px;
+      .main-txt {
+        @include font(48px, var(--white), 1.4, var(--fw-bold));
+      }
+    }
+  }
+  &.about {
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  padding: 80px 40px 40px;
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    .copy {
+      @include font(14px, var(--white-opa40), 1.4, var(--fw-bold));
+    }
+  }
+}

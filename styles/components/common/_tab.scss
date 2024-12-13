@@ -1,0 +1,67 @@
+.ant-tabs {
+  .ant-tabs {
+    &-nav {
+      margin: 0 0 8px 0 !important;
+      &::before {
+        display: none;
+      }
+    }
+    &-nav-list {
+      .ant-tabs-tab {
+        padding: 5px 0;
+        .ant-tabs-tab-btn {
+          @include font(14px, var(--text-08) !important, null, var(--fw-bold));
+        }
+        &-active {
+          .ant-tabs-tab-btn {
+            color: var(--primary) !important;
+          }
+        }
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+    &-ink-bar {
+      background: var(--primary) !important;
+    }
+    &-content {
+      .ant-tabs-tabpane {
+        @include font(14px, var(--text-08), null, var(--fw-bold));
+      }
+    }
+  }
+}
+
+// 스위치형 탭
+.switch-tab {
+  .ant-tabs {
+    &-nav-list {
+      .ant-tabs-tab {
+        .ant-tabs-tab-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 100px;
+          padding: 0 20px;
+          height: 44px;
+          @include font(14px, var(--text-08) !important, null, var(--fw-bold));
+          background: var(--white) !important;
+          border-radius: 60px;
+        }
+        &-active {
+          .ant-tabs-tab-btn {
+            color: var(--white) !important;
+            background: var(--primary) !important;
+          }
+        }
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+    &-ink-bar {
+      display: none;
+    }
+  }
+}

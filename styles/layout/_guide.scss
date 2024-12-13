@@ -1,0 +1,242 @@
+// 가이드 페이지
+.guide-wrap {
+  overflow-y: auto;
+  height: 100%;
+  padding: 10px;
+  .guide-title-set {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    .guide-title {
+      font-size: 22px;
+    }
+    .guide-txt {
+      font-size: 18px;
+      color: #3870f3;
+      text-decoration: underline;
+    }
+  }
+}
+.guide-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+  tr {
+    &.line {
+      border-top: 2px solid #ccc;
+    }
+  }
+  thead {
+    th {
+      padding: 7px 5px;
+      border: 1px solid #ccc;
+      border-bottom: double #ccc;
+      white-space: nowrap;
+      background: #d9d9d9;
+      font-size: 14px;
+    }
+  }
+  tbody {
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      font-size: 13px;
+      color: #555;
+      text-align: left;
+    }
+    td {
+      & > a {
+        display: inline-block;
+        color: #1c88f4;
+        text-decoration: underline;
+      }
+      &.ac {
+        text-align: center;
+      }
+      .yet,
+      .ing,
+      .hold,
+      .end {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 70px;
+        height: 24px;
+        border-radius: 15px;
+        font-size: 12px;
+        color: #fff;
+        &::before {
+          content: "";
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .yet {
+        background: #eaeaea;
+        color: #333;
+        &::before {
+          content: "작업전";
+        }
+      }
+      .ing {
+        background: #1c88f4;
+        &::before {
+          content: "작업중";
+        }
+      }
+      .hold {
+        background: #b5b5b5;
+        &::before {
+          content: "작업대기";
+        }
+      }
+      .end {
+        background: #33ddbc;
+        &::before {
+          content: "작업완료";
+        }
+      }
+    }
+  }
+}
+
+.guide-component {
+  overflow-y: auto;
+  width: 100%;
+  padding: 20px;
+  .guide-lnb {
+    position: fixed;
+    top: 20px;
+    flex-shrink: 0;
+    width: 200px;
+    height: calc(100vh - 40px);
+    padding-right: 2px;
+    border-right: 1px solid #ddd;
+    .cmt {
+      font-size: 14px;
+      color: #888;
+    }
+    &-list {
+      overflow-y: auto;
+      width: 100%;
+      height: calc(100% - 40px);
+      margin-top: 15px;
+      padding-right: 10px;
+      & > li {
+        & > a {
+          display: block;
+          padding: 5px;
+          font-size: 14px;
+          color: #606266;
+          &:hover,
+          &.active {
+            background: #33ddbc;
+            color: #fff;
+          }
+        }
+        & + li {
+          margin-top: 5px;
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #ddd;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #33ddbc;
+      }
+    }
+  }
+  .guide-content {
+    padding-left: 220px;
+    .guide-dvs {
+      padding: 10px;
+      border: 1px solid #ddd;
+      & > .title {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .guide-set {
+        position: relative;
+        .inner-box {
+          padding: 10px;
+          border: 1px dashed #ddd;
+          & > .title {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 14px;
+          }
+          .cont {
+            padding: 10px 10px 0;
+            &.row {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 10px 15px;
+              &.row8 {
+                grid-template-columns: repeat(8, 1fr);
+              }
+              gap: 15px 10px;
+            }
+            &.block {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+            }
+            &.flex-row {
+              display: flex;
+              flex-direction: row;
+              gap: 15px;
+            }
+            &.flex-wrap {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              flex-direction: row;
+              gap: 15px;
+            }
+            &.dim {
+              padding: 10px;
+              background: rgba(0, 0, 0, 0.08);
+            }
+          }
+          & + .inner-box {
+            margin-top: 10px;
+          }
+        }
+        .cont {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+        }
+        &.grid-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          .inner-box {
+            margin-top: 0;
+          }
+        }
+        &.flex-wrap {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+      }
+      & + .guide-dvs {
+        margin-top: 50px;
+      }
+    }
+  }
+}

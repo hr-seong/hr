@@ -1,0 +1,35 @@
+.vi-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  .txt {
+    @include font(14px, var(--white), null, var(--fw-bold));
+  }
+  // type
+  &.rect {
+    border-radius: 8px;
+  }
+  &.round {
+    border-radius: 32px;
+  }
+  // size
+  &.sm {
+    height: 20px;
+    padding: 0 8px;
+    .txt {
+      font-size: 12px;
+    }
+  }
+  &.md {
+    height: 28px;
+    padding: 0 12px;
+  }
+  &.lg {
+    height: 36px;
+    padding: 0 16px;
+    .txt {
+      font-size: 18px;
+    }
+  }
+}

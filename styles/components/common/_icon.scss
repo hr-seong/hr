@@ -1,0 +1,61 @@
+.ico {
+  flex-shrink: 0;
+  width: 24px;
+  aspect-ratio: 1/1;
+  @include font(14px, var(--white), 1.4, var(--fw-bold));
+  // 40 X 40
+  &.xl {
+    width: 40px;
+  }
+  // 32 X 32
+  &.lg {
+    width: 32px;
+  }
+  // 24 X 24
+  &.md {
+    width: 24px;
+  }
+  // 12 X 12
+  &.xs {
+    width: 12px;
+  }
+  &-snb1 {
+    background: url("../../../public/images/icon/icon_snb_1.svg") no-repeat center / contain;
+    &.active {
+      background: url("../../../public/images/icon/icon_snb_1_act.svg") no-repeat center / contain;
+    }
+  }
+  &-filter {
+    background: url("../../../public/images/icon/icon_filter.svg") no-repeat center / contain;
+    &.active {
+      background: url("../../../public/images/icon/icon_filter_act.svg") no-repeat center / contain;
+    }
+  }
+  &-hamburger {
+    background: url("../../../public/images/icon/icon_hamburger.svg") no-repeat center / contain;
+    &.active {
+      background: url("../../../public/images/icon/icon_hamburger_wht.svg") no-repeat center / contain;
+    }
+  }
+  &-download {
+    background: url("../../../public/images/icon/icon_download.svg") no-repeat center / contain;
+  }
+  &-close {
+    background: url("../../../public/images/icon/icon_close.svg") no-repeat center / contain;
+    &.active {
+      background: url("../../../public/images/icon/icon_close_wht.svg") no-repeat center / contain;
+    }
+  }
+  &-prev {
+    background: url("../../../public/images/icon/icon_prev.svg") no-repeat center / contain;
+    &.active {
+      background: url("../../../public/images/icon/icon_prev_wht.svg") no-repeat center / contain;
+    }
+  }
+  &-search {
+    background: url("../../../public/images/icon/icon_search.svg") no-repeat center / contain;
+  }
+  &-more {
+    background: url("../../../public/images/icon/icon_more.svg") no-repeat center / contain;
+  }
+}

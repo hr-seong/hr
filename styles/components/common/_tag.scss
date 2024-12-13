@@ -1,0 +1,36 @@
+.vi-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--primary);
+  .txt {
+    @include font(14px, var(--primary), null, var(--fw-bold));
+  }
+  // type
+  &.rect {
+    border-radius: 8px;
+  }
+  &.round {
+    border-radius: 28px;
+  }
+  // size
+  &.sm {
+    height: 20px;
+    padding: 0 8px;
+    .txt {
+      font-size: 12px;
+    }
+  }
+  &.md {
+    height: 24px;
+    padding: 0 12px;
+  }
+  &.lg {
+    height: 32px;
+    padding: 0 16px;
+    .txt {
+      font-size: 16px;
+    }
+  }
+}
