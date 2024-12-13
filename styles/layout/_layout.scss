@@ -7,6 +7,7 @@
   height: 100%;
 
   &.blk {
+    background: var(--black);
     color: var(--white);
   }
   &.wht {
@@ -23,20 +24,89 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
     }
     .nav {
       display: flex;
       justify-content: space-between;
+      margin: 80px 40px 80px 120px;
       &-list {
-        width: 60%;
+        z-index: 1;
+        width: 54%;
         gap: 40px;
         & > li {
-          @include font(100px, var(--white), 1.4, var(--fw-bold));
+          width: fit-content;
+          & > a {
+            z-index: 99;
+            @include font(100px, var(--white), 1.4, var(--fw-bold));
+            &::after {
+              content: "";
+              display: block;
+              opacity: 0;
+              width: 100%;
+              height: 6px;
+              background: var(--white);
+              transition: all 1s;
+            }
+          }
+          &::after {
+            content: "";
+            z-index: -1;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 94%;
+            height: 88%;
+            transition: all 0.4s;
+          }
           &.li-1 {
+            &::after {
+              background: url("../../public/images/bg/bg_nav_about.png") no-repeat 0 0;
+            }
           }
           &.li-2 {
+            &::after {
+              height: 92%;
+              background: url("../../public/images/bg/bg_nav_projects.png") no-repeat 0 0;
+            }
           }
           &.li-3 {
+            &::after {
+              height: 92%;
+              background: url("../../public/images/bg/bg_nav_contact.png") no-repeat 0 0;
+            }
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+            & > a {
+              &::after {
+                opacity: 1;
+              }
+            }
+            // &.li-1 {
+            //   &::after {
+            //     background: url("../../public/images/bg/bg_nav_about.png") no-repeat 0 0;
+            //   }
+            // }
+            // &.li-2 {
+            //   &::after {
+            //     height: 92%;
+            //     background: url("../../public/images/bg/bg_nav_projects.png") no-repeat 0 0;
+            //   }
+            // }
+            // &.li-3 {
+            //   &::after {
+            //     height: 92%;
+            //     background: url("../../public/images/bg/bg_nav_contact.png") no-repeat 0 0;
+            //   }
+            // }
           }
         }
       }
@@ -44,8 +114,37 @@
         display: flex;
         gap: 160px;
         .mail {
+          & > li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .label {
+              width: 60px;
+              @include font(18px, var(--white), 1.4, var(--fw-bold));
+            }
+            .con {
+              & > a {
+                @include font(18px, var(--white), 1.4, var(--fw-medium));
+              }
+            }
+            & + li {
+              margin-top: 4px;
+            }
+          }
         }
         .company {
+          .name {
+            @include font(18px, var(--white), 1.4, var(--fw-bold));
+          }
+          .adress {
+            margin-top: 4px;
+            @include font(18px, var(--white), 1.4, var(--fw-regular));
+            & > strong {
+              display: inline-block;
+              margin-bottom: 8px;
+              font-weight: var(--fw-me);
+            }
+          }
         }
       }
     }
@@ -59,6 +158,7 @@
 .container {
   position: relative;
   &.main {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background: url("../../public/images/bg/bg_main_visual.png") no-repeat 0 0;

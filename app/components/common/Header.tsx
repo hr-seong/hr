@@ -60,28 +60,26 @@ export default function Header() {
               </li>
             </ul>
             <div className="info">
-              <div className="mail">
-                <ul className="mail-list">
-                  <li>
-                    <div className="label">Email</div>
-                    <div className="con">
-                      <Link href="mailto: contact@ormakgil.com">contact@ormakgil.com</Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="label">Tel.</div>
-                    <div className="con">
-                      <Link href="tel:+82 (0)2 6959 9630">+82 (0)2 6959 9630</Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="label">Fax.</div>
-                    <div className="con">
-                      <Link href="tel:+82 (0)2 6711 9351">+82 (0)2 6711 9351</Link>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <ul className="mail">
+                <li>
+                  <div className="label">Email</div>
+                  <div className="con">
+                    <Link href="mailto: contact@ormakgil.com">contact@ormakgil.com</Link>
+                  </div>
+                </li>
+                <li>
+                  <div className="label">Tel.</div>
+                  <div className="con">
+                    <Link href="tel:+82 (0)2 6959 9630">+82 (0)2 6959 9630</Link>
+                  </div>
+                </li>
+                <li>
+                  <div className="label">Fax.</div>
+                  <div className="con">
+                    <Link href="tel:+82 (0)2 6711 9351">+82 (0)2 6711 9351</Link>
+                  </div>
+                </li>
+              </ul>
               <div className="company">
                 <div className="name">(주)오르막길</div>
                 <div className="adress">
