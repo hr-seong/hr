@@ -16,7 +16,8 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-matter-js": "^1.0.5"
+    "react-matter-js": "^1.0.5",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/node": "^20",

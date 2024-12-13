@@ -1,9 +1,17 @@
 "use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 import Image from "next/image";
 import txtImg1 from "../../public/images/bg/bg_about_txt1.png";
 import txtImg2 from "../../public/images/bg/bg_about_txt2.png";
 import txtImg3 from "../../public/images/bg/bg_about_txt3.png";
+import planImg from "../../public/images/bg/bg_about_plan.png";
+import designImg from "../../public/images/bg/bg_about_design.png";
+import frontImg from "../../public/images/bg/bg_about_front.png";
+import backImg from "../../public/images/bg/bg_about_back.png";
 
 export default function About() {
   return (
@@ -52,7 +60,39 @@ export default function About() {
         </div>
       </div>
       <div className="section sec3">
-        <div className="content">fff</div>
+        <div className="content">
+          <Swiper
+            // spaceBetween={}
+            slidesPerView={1}
+            mousewheel={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Mousewheel, Pagination]}
+            className="aboutSwiper"
+          >
+            <SwiperSlide>
+              <div className="slide-set">
+                <div className="union">
+                  <Image src={planImg} alt="" />
+                </div>
+                <div className="desc">
+                  <div className="tit-set">
+                    <div className="num">01</div>
+                    <div className="tit">Plan</div>
+                  </div>
+                  <div className="txt">
+                    분석 및 요건을 수립하고 프로젝트 가이드를 작성한 후, <br />
+                    POC 피드백을 바탕으로 실구현을 위해 설계합니다.
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

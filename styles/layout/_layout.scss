@@ -216,6 +216,86 @@
           margin-top: 160px;
           @include font(24px, var(--white), 1.5, var(--fw-extra));
         }
+        .aboutSwiper {
+          .swiper-wrapper {
+            height: 480px;
+            .swiper-slide {
+              .slide-set {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                justify-content: space-between;
+                gap: 80px;
+                max-width: 1520px;
+                margin: 0 auto;
+                .union {
+                  margin-left: 200px;
+                }
+                .desc {
+                  margin-right: 200px;
+                  .tit-set {
+                    .num {
+                      @include font(16px, var(--white), 1.4, var(--fw-bold));
+                    }
+                    .tit {
+                      @include font(60px, var(--white), 1.4, var(--fw-medium));
+                    }
+                  }
+                  .txt {
+                    @include font(32px, var(--white), 1.4);
+                  }
+                }
+              }
+            }
+          }
+          .swiper-pagination {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            .swiper-pagination-bullet {
+              position: relative;
+              width: 100%;
+              height: 50px;
+              background: transparent;
+              border-bottom: 1px solid var(--white);
+              border-radius: 0;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                @include font(22px, var(--white), 1.4, var(--fw-extra));
+              }
+              &:first-child {
+                &::before {
+                  content: "Plan";
+                }
+              }
+              &:nth-child(2) {
+                &::before {
+                  content: "Design";
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  content: "Front-End";
+                }
+              }
+              &:last-child {
+                &::before {
+                  content: "Back-End";
+                }
+              }
+              &-active {
+                border-color: var(--primary);
+                &::before {
+                  color: var(--primary);
+                }
+              }
+            }
+          }
+        }
       }
       &.sec2 {
         width: 100%;
